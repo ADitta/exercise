@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /* reset */
 *,::after,::before{box-sizing:border-box}*{margin:0}body{line-height:1.5;-webkit-font-smoothing:antialiased}canvas,img,picture,svg,video{display:block;max-width:100%}button,input,select,textarea{font:inherit}h1,h2,h3,h4,h5,h6,p{overflow-wrap:break-word}
 
@@ -13,7 +16,6 @@ body {
 /* typography */
 h1, h2, p {
     line-height: 1.5rem;
-    margin: 1.5rem 0;
 }
 
 h1 {
@@ -34,20 +36,19 @@ h2 {
     }
 }
 
-a:link, a:visited {
+.link:link, .link:visited {
     color: #ec008c;
     text-decoration: none;
 }
 
-a:hover, a:active {
+.link:hover, .link:active {
     color: #a20060;
     text-decoration: underline;
 }
 
 /* containers */
 .inner {
-    margin: 0 auto;
-    padding: 1.5rem 2rem;
+ @apply px-5 lg:mx-auto max-w-screen-xl
 }
 
 @media (min-width: 80rem) {
@@ -58,12 +59,12 @@ a:hover, a:active {
 
 /* header */
 header img {
-    width: 6rem;
+    width: 7rem;
 }
 
 @media (min-width: 60rem) {
     header img {
-        width: 10rem;
+        width: 9rem;
     }
 }
 
@@ -73,9 +74,7 @@ nav {
 }
 
 nav .inner {
-    display: flex;
-    gap: 2rem;
-    padding: 0 2rem;
+    color: black;
 }
 
 nav a {
@@ -135,4 +134,16 @@ main {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         column-gap: 1.5rem;
     }
+}
+
+/* Buttons */
+.btn-primary {
+    @apply bg-primary text-black border-black hover:bg-black hover:text-primary hover:border-primary;
+}
+.btn-secondary {
+    @apply bg-secondary text-white border-white hover:bg-white hover:text-secondary hover:border-secondary;
+}
+
+.btn-accent{
+    @apply bg-white text-black border-black hover:bg-black hover:text-white hover:border-white;
 }
