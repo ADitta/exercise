@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use HasFactory;
+    public function images()
+    {
+        return $this->hasMany(ProductImage::class);
+    }
+
+    public function mainImage()
+    {
+        return $this->belongsTo(ProductImage::class, 'main_image_id');
+    }
 }

@@ -19,4 +19,4 @@ Route::get('/', [PageController::class, 'home'])->name('homepage');
 
 Route::resource('/page', PageController::class)->only(['show']);
 
-Route::get('/products/{product:slug}', [ProductController::class, 'show'])->name('product.show');
+Route::get('/products/{product:slug}', [ProductController::class, 'show'])->name('products.show');

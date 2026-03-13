@@ -1,4 +1,5 @@
-<a href="/products/{{ $product->slug }}">
-    <img src="{{ asset('images/product/' . $product->image) }}" alt="{{ $product->name }}">
+@props(['product'])
+<a href="{{ route('products.show', $product) }}">
+    <img src="{{ asset($product->mainImage->imagePath) }}" alt="{{ $product->name }}">
     {{ $product->name }}
 </a>

@@ -14,7 +14,7 @@ class PageController extends Controller
     {
         $page = Page::find(1);
 
-        $products = Product::all();
+        $products = Product::with('mainImage')->get();
 
         return view('page.show', compact('page', 'products'));
     }

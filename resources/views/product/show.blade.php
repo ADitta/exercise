@@ -1,9 +1,9 @@
 <x-layout>
-    <h1>{{ $product->name }}</h1>
+    <h1 class="mb-md">{{ $product->name }}</h1>
 
     <div class="product-page">
         <div>
-            <img src="{{ asset('images/product/' . $product->image) }}" alt="{{ $product->name }}">
+            <img src="{{ asset($product->mainImage->imagePath) }}" alt="{{ $product->mainImage->imageUrl }}">
         </div>
 
         <div>
