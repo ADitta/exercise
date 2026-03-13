@@ -14,42 +14,38 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body>
-    <header>
-        <div class="inner">
-            <a href="{{ route('homepage') }}">
-                <img src="{{ asset('images/lsi-logo.svg') }}" alt="LSi">
-            </a>
-        </div>
-    </header>
-
-    @isset($navitems)
-        <nav>
-            <div class="inner">
-                @foreach ($navitems as $navitem)
-                    <a href="{{ $navitem->id == 1 ? url('/') : route('page.show', $navitem) }}">{{ $navitem->title }}</a>
-                @endforeach
+<body class="flex flex-col">
+    <div>
+        <header>
+            <div class="inner pt-md">
+                <a href="{{ route('homepage') }}">
+                    <img src="{{ asset('images/lsi-logo.svg') }}" alt="LSi">
+                </a>
             </div>
-        </nav>
-    @endisset
+            <div class="divider"></div>
+            @if ($backLink)
+                <div class="inner pb-lg">
+                    <span class="relative">
+                        <a class="back-link link" href="{{ $backLink }}"> <span class="arrow">&larr;</span> go
+                            back</a>
+                    </span>
+                </div>
+            @endif
+        </header>
 
-    @if ($backLink)
-        <div class="inner pb-lg">
-            <span class="relative">
-                <a class="back-link link" href="{{ $backLink }}"> <span class="arrow">&larr;</span> go back</a>
+
+        <main>
+            <div class="inner">
+                {{ $slot }}
+            </div>
+        </main>
+    </div>
+
+    <footer class="py-md bg-primary">
+        <div class="inner">
+         <span class="text-black">
+             &copy; <a class="font-semibold hover:underline" href="https://www.lsi.co.uk" target="_blank">LSi Ltd</a> 2023
             </span>
-        </div>
-    @endif
-
-    <main>
-        <div class="inner">
-            {{ $slot }}
-        </div>
-    </main>
-
-    <footer>
-        <div class="inner">
-            &copy; <a href="https://www.lsi.co.uk" target="_blank">LSi Ltd</a> 2023
         </div>
     </footer>
 </body>

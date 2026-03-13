@@ -6,7 +6,7 @@
 
 /* basics */
 body {
-    background-color: #f0f0f0;
+    @apply bg-base justify-between min-h-screen;
     color: #222;
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
@@ -37,12 +37,12 @@ h2 {
 }
 
 .link:link, .link:visited {
-    color: #ec008c;
+    @apply text-secondary;
     text-decoration: none;
 }
 
 .link:hover, .link:active {
-    color: #a20060;
+    @apply text-highlighted;
 }
 
 /* containers */
@@ -81,10 +81,6 @@ nav a {
     padding: 1rem 0;
 }
 
-/* main content */
-main {
-    background-color: #fff;
-}
 
 /* product grid */
 .product-grid{
@@ -132,7 +128,6 @@ main {
 /* back link styling */
 .back-link::after{
     content: '';
-    /* display: inline-block; */
     position: absolute;
     bottom: -4px;
     left: 0;
