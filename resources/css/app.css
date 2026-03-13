@@ -139,14 +139,14 @@ main {
 /* Carousel */
 
 .carousel-buttons-container{
-  @apply  absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between;
+  @apply absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between;
 }
 .carousel-button-default{
    @apply btn btn-circle bg-secondary;
 }
 
 .carousel-button-disabled{
-    @apply opacity-50 cursor-default  hover:bg-secondary border-none;
+    @apply opacity-50 cursor-default hover:bg-secondary border-none;
     pointer-events: none;
 }
 
@@ -160,4 +160,9 @@ main {
 
 .btn-accent{
     @apply bg-white text-black border-black hover:bg-black hover:text-white hover:border-white;
+}
+
+
+.divider{
+    @apply after:bg-primary before:bg-primary;
 }
