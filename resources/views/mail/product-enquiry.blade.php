@@ -1,4 +1,4 @@
-<x-layout :backLink="route('products.show', $enquiry['productSlug'])">
+<x-layout title="Enquiry" :backLink="route('products.show', $enquiry['productSlug'])">
     <div class="container mx-auto card shadow-md mb-lg">
         <div class="card-body">
             <h1 class="card-title sm:text-3xl">New enquiry submitted</h1>

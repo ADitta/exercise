@@ -87,6 +87,11 @@ h2 {
     @apply text-highlighted;
 }
 
+ul {
+    list-style:disc;;
+    margin-left: 18px;
+}
+
 /* containers */
 .inner {
     @apply px-5 lg:mx-auto max-w-screen-xl;

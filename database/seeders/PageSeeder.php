@@ -15,8 +15,8 @@ class PageSeeder extends Seeder
         Page::firstOrCreate(
             ['id' => 1],
             [
-                'title' => 'Welcome to the LSi Coding Exercise',
-                'content' => '<p>Thank you for applying and congratulations for getting to the next stage of our interview process!</p><p>There are a few small tasks we\'d like you to complete. Feel free to refresh your memory by checking out the readme.md file or visiting <a href="https://github.com/scott-lsi/exercise">https://github.com/scott-lsi/exercise</a>.</p><p>Good luck!</p>',
+                'title' => 'Welcome to my LSi Coding Exercise solution',
+                'content' => '<p>This is my submission where I added the following features. </p><ul><li>Multiple images linked to products</li><li>URL slug for products</li><li>Enquiry form that leads to a preview page</li><li>Responsive styling with tailwind and DaisyUI</li></ul> <p> You can visit the project at: <a class="link" href="https://github.com/scott-lsi/exercise">https://github.com/ADitta/exercise</a>.</p><p>Thank you for visiting!</p>',
             ]
         );
     }

@@ -1,6 +1,6 @@
 @props(['value'])
 <label class="relative w-full">
-    <textarea class="textarea floating-input peer" name="{{ $value }}"
+    <textarea class="textarea resize-none floating-input peer" name="{{ $value }}"
         placeholder="{{ $value }}">{{ old($value) }}</textarea>
     <span
         class="floating-input-label">
