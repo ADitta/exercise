@@ -94,8 +94,6 @@ main {
     @apply card-body link  transition-all duration-300 hover:-translate-y-1 max-sm:mb-4 last:max-sm:mb-0 bg-white shadow-md rounded;
 }
 
-/* product page */
-
 
 
 /* Carousel */
@@ -125,6 +123,33 @@ main {
 }
 
 
+
 .divider{
     @apply after:bg-primary before:bg-primary;
+}
+
+
+/* back link styling */
+.back-link::after{
+    content: '';
+    /* display: inline-block; */
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    transition: all 0.3s;
+    height: 1px;
+    @apply bg-secondary;
+}
+
+.arrow{
+    display: inline-block;
+    transition: all 0.3s;
+}
+.back-link:hover .arrow{
+    transform: translateX(-2px);
+}
+
+.back-link:hover::after{
+    width: 100%;
 }
