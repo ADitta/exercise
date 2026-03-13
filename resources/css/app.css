@@ -136,6 +136,20 @@ main {
     }
 }
 
+/* Carousel */
+
+.carousel-buttons-container{
+  @apply  absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between;
+}
+.carousel-button-default{
+   @apply btn btn-circle bg-secondary;
+}
+
+.carousel-button-disabled{
+    @apply opacity-50 cursor-default  hover:bg-secondary border-none;
+    pointer-events: none;
+}
+
 /* Buttons */
 .btn-primary {
     @apply bg-primary text-black border-black hover:bg-black hover:text-primary hover:border-primary;
