@@ -1,13 +1,14 @@
-<x-layout>
+<x-layout :title="$page->title">
     <x-slot:title>{{ $page->title }}</x-slot>
+    <h1 class="mb-lg">{{ $page->title }}</h1>
     
-    <h1>{{ $page->title }}</h1>
-
-    {!! $page->content !!}
+    <div class="*:mb-md">
+        {!! $page->content !!}
+    </div>
 
     @isset($products)
         <div class="product-grid">
-            @foreach($products as $product)
+            @foreach ($products as $product)
                 <x-product-grid-item :product="$product" />
             @endforeach
         </div>

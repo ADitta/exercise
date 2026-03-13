@@ -1,5 +1,5 @@
 <x-layout :backLink="route('products.show', $enquiry['productSlug'])">
-    <div class="container mx-auto card shadow-md">
+    <div class="container mx-auto card shadow-md mb-lg">
         <div class="card-body">
             <h1 class="card-title sm:text-3xl">New enquiry submitted</h1>
             <div class="divider"></div>
@@ -18,12 +18,14 @@
 
 
             <div class="divider"></div>
+
             <h2 class="bold mb-2">Product</h2>
-          <a class="link" href="{{ route('products.show', $enquiry['productSlug']) }}">{{ $enquiry['productName'] }}</a>
+            <a class="link" href="{{ route('products.show', $enquiry['productSlug']) }}">{{ $enquiry['productName'] }}</a>
+
             <div class="divider"></div>
+
             <h2 class="text-bold mb-2">Enquiry</h2>
             <p class="">{{ $enquiry['enquiry'] }}</p>
         </div>
     </div>
-
 </x-layout>

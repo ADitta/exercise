@@ -1,4 +1,4 @@
-<x-layout backLink='/'>
+<x-layout :title="'Product | ' . $product->name" backLink='/'>
     <h1 class="mb-lg">{{ $product->name }}</h1>
 
     <div class="md:flex gap-8">
